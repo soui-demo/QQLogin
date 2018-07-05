@@ -7,20 +7,14 @@ TARGET = qqlogin
 CONFIG(x64){
 TARGET = $$TARGET"64"
 }
-DEPENDPATH += .
-INCLUDEPATH += .
+
+include($$(SOUIPATH)/demo_com.pri)
 
 INCLUDEPATH += . \
 			   ./extend.ctrls \
 			   ./extend.events \
 			   ./extend.skins \
-			   ../../utilities/include \
-			   ../../soui/include \
-			   ../../components \
 			   
-dir = ../..
-include($$dir/common.pri)
-
 CONFIG(debug,debug|release){
 	LIBS += utilitiesd.lib souid.lib imm32.lib
 }
@@ -59,14 +53,14 @@ HEADERS += GroupChatFrame.h \
            extend.skins/SAntialiasSkin.h \
            extend.skins/SVscrollbar.h \	
            extend.events/ExtendEvents.h \
-           ../../controls.extend/SChromeTabCtrl.h \
-           ../../controls.extend/SImageMaskWnd.h \
-           ../../controls.extend/STurn3DView.h \
-           ../../controls.extend/image3d/3dlib.h \
-           ../../controls.extend/image3d/3dmatrix.h \
-           ../../controls.extend/image3d/3dTransform.h \
-           ../../controls.extend/FileHelper.h \
-           ../../controls.extend/slistboxex.h
+           $(SOUIPATH)/controls.extend/SChromeTabCtrl.h \
+           $(SOUIPATH)/controls.extend/SImageMaskWnd.h \
+           $(SOUIPATH)/controls.extend/STurn3DView.h \
+           $(SOUIPATH)/controls.extend/image3d/3dlib.h \
+           $(SOUIPATH)/controls.extend/image3d/3dmatrix.h \
+           $(SOUIPATH)/controls.extend/image3d/3dTransform.h \
+           $(SOUIPATH)/controls.extend/FileHelper.h \
+           $(SOUIPATH)/controls.extend/slistboxex.h
 
 SOURCES += GroupChatFrame.cpp \
            MainDlg.cpp \
@@ -91,12 +85,12 @@ SOURCES += GroupChatFrame.cpp \
            extend.ctrls/imre/RichEditOleCtrls.cpp \
            extend.ctrls/imre/RichEditUnitConverter.cpp \
            extend.ctrls/imre/SImRichedit.cpp \
-           ../../controls.extend/SChromeTabCtrl.cpp \
-           ../../controls.extend/SImageMaskWnd.cpp \
-           ../../controls.extend/STurn3DView.cpp \
-           ../../controls.extend/image3d/3dlib.cpp \
-           ../../controls.extend/image3d/3dmatrix.cpp \
-           ../../controls.extend/image3d/3dtransform.cpp \
-           ../../controls.extend/slistboxex.cpp
+           $(SOUIPATH)/controls.extend/SChromeTabCtrl.cpp \
+           $(SOUIPATH)/controls.extend/SImageMaskWnd.cpp \
+           $(SOUIPATH)/controls.extend/STurn3DView.cpp \
+           $(SOUIPATH)/controls.extend/image3d/3dlib.cpp \
+           $(SOUIPATH)/controls.extend/image3d/3dmatrix.cpp \
+           $(SOUIPATH)/controls.extend/image3d/3dtransform.cpp \
+           $(SOUIPATH)/controls.extend/slistboxex.cpp
 
 RC_FILE += qqlogin.rc
