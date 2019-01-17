@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9,00"
 	Name="qqlogin"
-	ProjectGUID="{1E9AF649-D2CE-3BAD-B85C-927C2B6514FE}"
+	ProjectGUID="{63AA7F9E-F166-3B04-B4F2-126BFC3F6BFC}"
 	Keyword="Qt4VSv1.0">
 	<Platforms>
 		<Platform
@@ -12,27 +12,26 @@
 	<Configurations>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\..\bin\"
+			OutputDirectory="release\"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			CharacterSet="1"
 			ConfigurationType="1"
-			IntermediateDirectory="..\..\obj\release\qqlogin\"
+			IntermediateDirectory="release\"
 			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".,.,.,extend.ctrls,extend.events,extend.skins,..\..\utilities\include,..\..\soui\include,..\..\components,..\..\config,..\..\tools\mkspecs\win32-msvc2008"
+				AdditionalIncludeDirectories=".,.,$(SOUIPATH)/utilities/include,$(SOUIPATH)/soui/include,$(SOUIPATH)/components,$(SOUIPATH)/config,.,extend.ctrls,extend.events,extend.skins,..\..\soui\tools\mkspecs\win32-msvc2008"
 				AdditionalOptions="/MP"
-				AssemblerListingLocation="..\..\obj\release\qqlogin\"
-				DebugInformationFormat="3"
-				DisableSpecificWarnings="4100,4101,4102,4189,4996"
+				AssemblerListingLocation="release\"
+				DebugInformationFormat="0"
 				ExceptionHandling="1"
 				ForcedIncludeFiles="stdafx.h"
 				GeneratePreprocessedFile="0"
-				ObjectFile="..\..\obj\release\qqlogin\"
-				Optimization ="1"
+				ObjectFile="release\"
+				Optimization ="2"
 				PrecompiledHeaderFile="$(IntDir)\qqlogin.pch"
 				PrecompiledHeaderThrough="stdafx.h"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST,NDEBUG"
+				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_NO_DYNAMIC_CAST,NDEBUG"
 				ProgramDataBaseFileName="$(IntDir)"
 				RuntimeLibrary="0"
 				SuppressStartupBanner="true"
@@ -44,15 +43,13 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="utilities.lib soui.lib imm32.lib"
-				AdditionalLibraryDirectories="..\..\bin"
+				AdditionalLibraryDirectories="$(SOUIPATH)\bin"
 				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
 				DataExecutionPrevention="true"
-				EnableCOMDATFolding="2"
-				GenerateDebugInformation="true"
+				GenerateDebugInformation="false"
 				IgnoreImportLibrary="true"
 				LinkIncremental="1"
 				LinkTimeCodeGeneration="0"
-				OptimizeReferences="2"
 				OutputFile="$(OutDir)\qqlogin.exe"
 				ProgramDatabaseFile=""
 				RandomizedBaseAddress="true"
@@ -74,31 +71,30 @@
 				Name="VCPreLinkEventTool" />
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST" />
+				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_NO_DYNAMIC_CAST" />
 		</Configuration>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="..\..\bin\"
+			OutputDirectory="debug\"
 			ATLMinimizesCRunTimeLibraryUsage="false"
 			CharacterSet="1"
 			ConfigurationType="1"
-			IntermediateDirectory="..\..\obj\debug\qqlogin\"
+			IntermediateDirectory="debug\"
 			UseOfMfc="0">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".,.,.,extend.ctrls,extend.events,extend.skins,..\..\utilities\include,..\..\soui\include,..\..\components,..\..\config,..\..\tools\mkspecs\win32-msvc2008"
+				AdditionalIncludeDirectories=".,.,$(SOUIPATH)/utilities/include,$(SOUIPATH)/soui/include,$(SOUIPATH)/components,$(SOUIPATH)/config,.,extend.ctrls,extend.events,extend.skins,..\..\soui\tools\mkspecs\win32-msvc2008"
 				AdditionalOptions="/MP"
-				AssemblerListingLocation="..\..\obj\debug\qqlogin\"
+				AssemblerListingLocation="debug\"
 				DebugInformationFormat="3"
-				DisableSpecificWarnings="4100,4101,4102,4189,4996"
 				ExceptionHandling="1"
 				ForcedIncludeFiles="stdafx.h"
 				GeneratePreprocessedFile="0"
-				ObjectFile="..\..\obj\debug\qqlogin\"
+				ObjectFile="debug\"
 				Optimization ="4"
-				PrecompiledHeaderFile="$(IntDir)\qqlogind.pch"
+				PrecompiledHeaderFile="$(IntDir)\qqlogin.pch"
 				PrecompiledHeaderThrough="stdafx.h"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST"
+				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_NO_DYNAMIC_CAST"
 				ProgramDataBaseFileName="$(IntDir)"
 				RuntimeLibrary="1"
 				SuppressStartupBanner="true"
@@ -110,13 +106,13 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="utilitiesd.lib souid.lib imm32.lib"
-				AdditionalLibraryDirectories="..\..\bin"
+				AdditionalLibraryDirectories="$(SOUIPATH)\bin"
 				AdditionalOptions="&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot;"
 				DataExecutionPrevention="true"
 				GenerateDebugInformation="true"
 				IgnoreImportLibrary="true"
 				LinkTimeCodeGeneration="0"
-				OutputFile="$(OutDir)\qqlogind.exe"
+				OutputFile="$(OutDir)\qqlogin.exe"
 				ProgramDatabaseFile=""
 				RandomizedBaseAddress="true"
 				SubSystem="2"
@@ -137,7 +133,7 @@
 				Name="VCPreLinkEventTool" />
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,_CRT_SECURE_NO_WARNINGS,QT_NO_DYNAMIC_CAST,_DEBUG" />
+				PreprocessorDefinitions="_WINDOWS,UNICODE,WIN32,QT_NO_DYNAMIC_CAST,_DEBUG" />
 		</Configuration>
 	</Configurations>
 	<Files>
@@ -146,11 +142,11 @@
 			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
 			<File
-				RelativePath="..\..\controls.extend\image3d\3dlib.cpp" />
+				RelativePath="D:\soui\controls.extend\image3d\3dlib.cpp" />
 			<File
-				RelativePath="..\..\controls.extend\image3d\3dmatrix.cpp" />
+				RelativePath="D:\soui\controls.extend\image3d\3dmatrix.cpp" />
 			<File
-				RelativePath="..\..\controls.extend\image3d\3dtransform.cpp" />
+				RelativePath="D:\soui\controls.extend\image3d\3dtransform.cpp" />
 			<File
 				RelativePath="extend.ctrls\imre\ClipboardConverter.cpp" />
 			<File
@@ -188,21 +184,21 @@
 			<File
 				RelativePath="extend.ctrls\SButtonEx.cpp" />
 			<File
-				RelativePath="..\..\controls.extend\SChromeTabCtrl.cpp" />
+				RelativePath="D:\soui\controls.extend\SChromeTabCtrl.cpp" />
 			<File
 				RelativePath="extend.ctrls\imre\SImRichedit.cpp" />
 			<File
-				RelativePath="..\..\controls.extend\SImageMaskWnd.cpp" />
+				RelativePath="D:\soui\controls.extend\SImageMaskWnd.cpp" />
 			<File
 				RelativePath="extend.ctrls\SImageView.cpp" />
 			<File
-				RelativePath="..\..\controls.extend\STurn3DView.cpp" />
+				RelativePath="D:\soui\controls.extend\STurn3DView.cpp" />
 			<File
 				RelativePath="extend.ctrls\SplitBar.cpp" />
 			<File
 				RelativePath="extend.ctrls\imre\dataobject.cpp" />
 			<File
-				RelativePath="..\..\controls.extend\slistboxex.cpp" />
+				RelativePath="D:\soui\controls.extend\slistboxex.cpp" />
 			<File
 				RelativePath="utils.cpp" />
 		</Filter>
@@ -211,11 +207,11 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
 			<File
-				RelativePath="..\..\controls.extend\image3d\3dTransform.h" />
+				RelativePath="D:\soui\controls.extend\image3d\3dTransform.h" />
 			<File
-				RelativePath="..\..\controls.extend\image3d\3dlib.h" />
+				RelativePath="D:\soui\controls.extend\image3d\3dlib.h" />
 			<File
-				RelativePath="..\..\controls.extend\image3d\3dmatrix.h" />
+				RelativePath="D:\soui\controls.extend\image3d\3dmatrix.h" />
 			<File
 				RelativePath="extend.ctrls\imre\ClipboardConverter.h" />
 			<File
@@ -225,7 +221,7 @@
 			<File
 				RelativePath="extend.skins\ExtendSkins.h" />
 			<File
-				RelativePath="..\..\controls.extend\FileHelper.h" />
+				RelativePath="D:\soui\controls.extend\FileHelper.h" />
 			<File
 				RelativePath="GroupChatFrame.h" />
 			<File
@@ -259,17 +255,17 @@
 			<File
 				RelativePath="extend.ctrls\SButtonEx.h" />
 			<File
-				RelativePath="..\..\controls.extend\SChromeTabCtrl.h" />
+				RelativePath="D:\soui\controls.extend\SChromeTabCtrl.h" />
 			<File
 				RelativePath="extend.ctrls\imre\SImRichEdit.h" />
 			<File
-				RelativePath="..\..\controls.extend\SImageMaskWnd.h" />
+				RelativePath="D:\soui\controls.extend\SImageMaskWnd.h" />
 			<File
 				RelativePath="extend.ctrls\SImageView.h" />
 			<File
 				RelativePath="extend.ctrls\SSplitBar.h" />
 			<File
-				RelativePath="..\..\controls.extend\STurn3DView.h" />
+				RelativePath="D:\soui\controls.extend\STurn3DView.h" />
 			<File
 				RelativePath="extend.skins\SVscrollbar.h" />
 			<File
@@ -277,7 +273,7 @@
 			<File
 				RelativePath="resource.h" />
 			<File
-				RelativePath="..\..\controls.extend\slistboxex.h" />
+				RelativePath="D:\soui\controls.extend\slistboxex.h" />
 			<File
 				RelativePath="stdafx.h">
 				<FileConfiguration
