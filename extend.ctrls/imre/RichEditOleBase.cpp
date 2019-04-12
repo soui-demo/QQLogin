@@ -38,7 +38,7 @@ namespace SOUI
         return m_pHostContainer->GetHostHwnd();
     }
 
-    const SStringW & OleWindow::GetTranslatorContext()
+    const SStringW & OleWindow::GetTranslatorContext() const
     {
         return m_pHostContainer->GetTranslatorContext();
     }

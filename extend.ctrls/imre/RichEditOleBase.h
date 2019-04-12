@@ -82,7 +82,7 @@ namespace SOUI
         BOOL            OnFireEvent(EventArgs &evt);
         CRect           GetContainerRect();
         HWND            GetHostHwnd();
-        const SStringW& GetTranslatorContext();
+        const SStringW & GetTranslatorContext() const;
         IRenderTarget*  OnGetRenderTarget(const CRect & rc, DWORD gdcFlags);
         void            OnReleaseRenderTarget(IRenderTarget * pRT, const CRect &rc, DWORD gdcFlags);
         void            OnRedraw(const CRect &rc);
